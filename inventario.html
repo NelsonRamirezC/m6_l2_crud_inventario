@@ -46,6 +46,8 @@
                     <th scope="col">Descripción</th>
                     <th scope="col">Precio</th>
                     <th scope="col">Stock</th>
+                    <th scope="col">Eliminar</th>
+                    <th scope="col">Actualizar</th>
                   </tr>
                 </thead>
                 <tbody id="datosProductos">
@@ -53,6 +55,34 @@
               </table>
 
         </section>
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalUpdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalTitulo">...</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        ID: <input type="text" id="modalID" disabled><br>
+                        Nombre: <input type="text" id="modalNombre"><br>
+                        Descripcion: <textarea class="form-control" rows="2"  id="modalDescripcion" required></textarea><br>
+                        Precio: <input type="number" id="modalPrecio" min="0" required><br>
+                        Stock: <input type="number" id="modalStock" min="0" required><br>
+                        Imágen: <input type="text" id="modalImagen" required><br>
+                        <button class="btn btn-warning mt-3">Actualizar</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
         
 
     </main>
@@ -81,6 +111,8 @@
                         <td>${producto.descripcion}</td>
                         <td>${producto.precio}</td>
                         <td>${producto.stock}</td>
+                        <td><button class="btn btn-danger" onclick="eliminarProducto()">Eliminar</button></td>
+                        <td><button class="btn btn-warning" onclick="actualizarProducto('${producto.id}')">Actualizar</button></td>
                     </tr>
                 `
             });
@@ -114,6 +146,34 @@
             .catch(error => console.log('error', error));
         })
 
+
+        const eliminarProducto = (id) => {
+            fetch("/productos/"+id, {
+                method: 'DELETE',
+            }).then(response => response.json())
+            .then(result=> {
+                pintarTabla(result.productos);
+            })
+            .catch(error => console.log('error', error));
+        }
+
+        const actualizarProducto = (id) => {
+            fetch("/productos/"+id)
+                .then(response => response.json())
+                .then(result => {
+                    const myModal = new bootstrap.Modal('#modalUpdate');
+                    modalTitulo.innerText = result.nombre;
+                    modalID.value = result.id;
+                    modalNombre.value = result.nombre;
+                    modalDescripcion.value = result.descripcion;
+                    modalPrecio.value = result.precio;
+                    modalStock.value = result.stock;
+                    modalImagen.value = result.imagen;
+                    myModal.show();
+                })
+                .catch(error => console.log('error', error));
+            
+        }
         const main = async () => {
             try {
                 formulario.addEventListener("submit", (event) =>event.preventDefault());

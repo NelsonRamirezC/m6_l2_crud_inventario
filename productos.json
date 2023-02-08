@@ -1,65 +1,25 @@
 {
     "productos": [
         {
-            "id": "7fddc2",
-            "nombre": "Zapatilla jordan verde",
-            "descripcion": "Zapatilla verde",
-            "precio": "119.990",
-            "stock": "20",
-            "imagen": "https://nikeclprod.vteximg.com.br/arquivos/ids/446321-1000-1000/DD1399_300_A_PREM.jpg?v=637848685656600000"
-        },
-        {
-            "id": "9a39cc",
+            "id": "9276d6",
             "nombre": "producto x",
-            "descripcion": "zapatilla x",
+            "descripcion": "sdcdcscs",
             "precio": "100000",
             "stock": "20",
             "imagen": "https://nikeclprod.vteximg.com.br/arquivos/ids/446321-1000-1000/DD1399_300_A_PREM.jpg?v=637848685656600000"
         },
         {
-            "id": "85d87d",
+            "id": "8a31bb",
             "nombre": "producto x",
-            "descripcion": "sacasc",
+            "descripcion": "ascass",
             "precio": "100000",
             "stock": "20",
             "imagen": "https://nikeclprod.vteximg.com.br/arquivos/ids/446321-1000-1000/DD1399_300_A_PREM.jpg?v=637848685656600000"
         },
         {
-            "id": "436477",
-            "nombre": "producto x",
-            "descripcion": "scasacsacsa",
-            "precio": "100000",
-            "stock": "20",
-            "imagen": "https://nikeclprod.vteximg.com.br/arquivos/ids/446321-1000-1000/DD1399_300_A_PREM.jpg?v=637848685656600000"
-        },
-        {
-            "id": "dafb1a",
-            "nombre": "producto x",
-            "descripcion": "ascsacsa",
-            "precio": "100000",
-            "stock": "20",
-            "imagen": "https://nikeclprod.vteximg.com.br/arquivos/ids/446321-1000-1000/DD1399_300_A_PREM.jpg?v=637848685656600000"
-        },
-        {
-            "id": "90c416",
-            "nombre": "producto x",
-            "descripcion": "ascsacsaca",
-            "precio": "100000",
-            "stock": "20",
-            "imagen": "https://nikeclprod.vteximg.com.br/arquivos/ids/446321-1000-1000/DD1399_300_A_PREM.jpg?v=637848685656600000"
-        },
-        {
-            "id": "616203",
-            "nombre": "producto x",
-            "descripcion": "sacsaa",
-            "precio": "100000",
-            "stock": "20",
-            "imagen": "https://nikeclprod.vteximg.com.br/arquivos/ids/446321-1000-1000/DD1399_300_A_PREM.jpg?v=637848685656600000"
-        },
-        {
-            "id": "1f4d35",
-            "nombre": "producto x",
-            "descripcion": "sacsacsa",
+            "id": "5ec354",
+            "nombre": "producto b",
+            "descripcion": "cascasca",
             "precio": "100000",
             "stock": "20",
             "imagen": "https://nikeclprod.vteximg.com.br/arquivos/ids/446321-1000-1000/DD1399_300_A_PREM.jpg?v=637848685656600000"
